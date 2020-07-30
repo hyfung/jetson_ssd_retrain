@@ -32,19 +32,27 @@ The packages used are: pytorch, pandas, boto3
 To view dataset stats, do
 ```
 python3 open_images_downloader.py --stats-only --class-names="CLASSNAMES"
+#For example
+#python3 open_images_downloader.py --stats-only --class-names="Man,Woman"
 ```
 
 To download images, do
 ```
 python3 open_images_downloader.py --class-names="CLASSNAMES" --max-images=N
+#For example
+#python3 open_images_downloader.py --class-names="Man,Woman" --max-images=2500
 ```
 
 ### Retraining Models
 ```
 python3 train_ssd --model-dir=models/<MODEL_NAME> --batch-size=N --num-epochs=N
+#For example
+#python3 train_ssd --model-dir=models/man_woman --batch-size=8 --num-epochs=100
 ```
 
 ### Converting To ONNX Format
 ```
 python3 export_onnx.py --model-dir=models/<MODEL_NAME>
+#For example
+#python3 export_onnx.py --model-dir=models/man_woman
 ```
