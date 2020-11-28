@@ -55,7 +55,7 @@ python3 train_ssd.py --model-dir=models/<MODEL_NAME> --batch-size=N --num-epochs
 
 ### Converting To ONNX Format
 ```
-python3 export_onnx.py --model-dir=models/<MODEL_NAME>
+python3 onnx_export.py --model-dir=models/<MODEL_NAME>
 #For example
-#python3 export_onnx.py --model-dir=models/man_woman
+#python3 onnx_export.py --model-dir=models/man_woman
 ```
