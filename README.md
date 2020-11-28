@@ -59,3 +59,8 @@ python3 onnx_export.py --model-dir=models/<MODEL_NAME>
 #For example
 #python3 onnx_export.py --model-dir=models/man_woman
 ```
+
+### Testing Models with SSD
+```
+python3 run_ssd_example.py mb1-ssd *.pth models/*/labels.txt test.jpg
+```
