@@ -48,9 +48,9 @@ python3 open_images_downloader.py --class-names="CLASSNAMES" --max-images=N
 
 ### Retraining Models
 ```
-python3 train_ssd --model-dir=models/<MODEL_NAME> --batch-size=N --num-epochs=N
+python3 train_ssd.py --model-dir=models/<MODEL_NAME> --batch-size=N --num-epochs=N
 #For example
-#python3 train_ssd --model-dir=models/man_woman --batch-size=8 --num-epochs=100
+#python3 train_ssd.py --model-dir=models/man_woman --batch-size=8 --num-epochs=100
 ```
 
 ### Converting To ONNX Format
