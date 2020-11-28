@@ -30,6 +30,8 @@ The packages used are: pytorch, pandas, boto3
 ## Usage
 
 ### Downloading Datasets From Open Images
+Refer to https://github.com/dusty-nv/pytorch-ssd/blob/master/open_images_classes.txt for labels
+
 To view dataset stats, do
 ```
 python3 open_images_downloader.py --stats-only --class-names="CLASSNAMES"
