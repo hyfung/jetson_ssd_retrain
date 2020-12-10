@@ -47,27 +47,29 @@ else:
     predictor = create_vgg_ssd_predictor(net, candidate_size=200)
 
 # Initialize an OpenCV capture
-cap = VideoCapture(image_path)
+cap = cv2.VideoCapture(0)
 # Main loop for OpenCV SSD
 while True:
-    ret, img = cap.read()
+    ret, display_image = cap.read()
 
     # Convert color space for tensorflow
-    image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    inference_image = cv2.cvtColor(display_image, cv2.COLOR_BGR2RGB)
 
     # Perform inference
-    boxes, labels, probs = predictor.predict(image, 10, 0.4)
+    boxes, labels, probs = predictor.predict(inference_image, 10, 0.4)
 
     # For each detection box draw the corresponding label
     for i in range(boxes.size(0)):
         box = boxes[i, :]
-        cv2.rectangle(orig_image, (box[0], box[1]), (box[2], box[3]), (255, 255, 0), 4)
+        cv2.rectangle(display_image, (box[0], box[1]), (box[2], box[3]), (255, 255, 0), 4)
         #label = f"""{voc_dataset.class_names[labels[i]]}: {probs[i]:.2f}"""
         label = f"{class_names[labels[i]]}: {probs[i]:.2f}"
-        cv2.putText(orig_image, label, (box[0] + 20, box[1] + 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2)
+        cv2.putText(display_image, label, (box[0] + 20, box[1] + 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2)
 
     # Verbal description of inference result
     print(f"Found {len(probs)} objects.")
+
+    cv2.imshow("Result", display_image)
 
     # Display our frame
     if cv2.waitKey(1) & 0xFF == ord('q'):
