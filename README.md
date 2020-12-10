@@ -5,6 +5,8 @@ This project allows retraining on desktop platform with Nvidia GPU.<br>
 In this example Ubuntu 18.04 LTS is used.<br>
 Windows is not supported.<br>
 
+Retrained models are stored in https://github.com/hyfung/jetson_ssd_retrain_models
+
 ## Installing Dependencies
 
 ### CUDA Driver
