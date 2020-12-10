@@ -49,6 +49,9 @@ python3 open_images_downloader.py --class-names="CLASSNAMES" --max-images=N
 ```
 
 ### Retraining Models
+Training a basic model (mb1-ssd)
+
+Other options are: mb1-ssd, mb1-lite-ssd, mb2-ssd-lite or vgg16-ssd
 ```
 python3 train_ssd.py --model-dir=models/<MODEL_NAME> --batch-size=N --num-epochs=N
 #For example
