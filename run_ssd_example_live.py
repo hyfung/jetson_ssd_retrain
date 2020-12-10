@@ -9,7 +9,7 @@ import sys
 
 
 if len(sys.argv) < 5:
-    print('Usage: python run_ssd_example.py <net type>  <model path> <label path> <image path>')
+    print('Usage: python run_ssd_example.py <net type>  <model path> <label path> <device index>')
     sys.exit(0)
 net_type = sys.argv[1]
 model_path = sys.argv[2]
@@ -47,7 +47,7 @@ else:
     predictor = create_vgg_ssd_predictor(net, candidate_size=200)
 
 # Initialize an OpenCV capture
-cap = VideoCapture(0)
+cap = VideoCapture(image_path)
 # Main loop for OpenCV SSD
 while True:
     ret, img = cap.read()

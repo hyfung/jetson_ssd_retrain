@@ -60,7 +60,12 @@ python3 onnx_export.py --model-dir=models/<MODEL_NAME>
 #python3 onnx_export.py --model-dir=models/man_woman
 ```
 
-### Testing Models with SSD
+### Testing Models with SSD (Static Image)
 ```
 python3 run_ssd_example.py mb1-ssd *.pth models/*/labels.txt test.jpg
+```
+
+### Testing Models with SSD (Live)
+```
+python3 run_ssd_example_live.py mb1-ssd *.pth models/*/labels.txt 0
 ```
