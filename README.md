@@ -48,6 +48,15 @@ python3 open_images_downloader.py --class-names="CLASSNAMES" --max-images=N
 #python3 open_images_downloader.py --class-names="Man,Woman" --max-images=2500
 ```
 
+List of useful dataset
+* Man,Woman
+* Bus,Car,Motorcycle,Truck,Van,Taxi
+* Human head,Human body,Human arm,Human hand,Human leg,Human foot
+* Human face,Human eye,Human ear,Human nose,Human mouth
+* Stop sign,Traffic light,Traffic sign,Vehicle
+* Vehicle,Vehicle registration plate
+
+
 ### Retraining Models
 Training a basic model (mb1-ssd)
 
