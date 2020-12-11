@@ -65,6 +65,9 @@ Other options are: mb1-ssd, mb1-lite-ssd, mb2-ssd-lite or vgg16-ssd
 python3 train_ssd.py --model-dir=models/<MODEL_NAME> --batch-size=N --num-epochs=N
 #For example
 #python3 train_ssd.py --model-dir=models/man_woman --batch-size=8 --num-epochs=100
+
+#Lazy guy's shortcut
+python3 train_ssd.py --model-dir=models/ --batch-size=8 --num-epochs=50
 ```
 
 ### Converting To ONNX Format
@@ -72,6 +75,9 @@ python3 train_ssd.py --model-dir=models/<MODEL_NAME> --batch-size=N --num-epochs
 python3 onnx_export.py --model-dir=models/<MODEL_NAME>
 #For example
 #python3 onnx_export.py --model-dir=models/man_woman
+
+#Lazy guy's shortcut
+python3 onnx_export.py --model-dir=models/
 ```
 
 ### Testing Models with SSD (Static Image)
