@@ -98,5 +98,9 @@ Dog
 
 ![alt text](https://github.com/hyfung/jetson_ssd_retrain/blob/master/images/02.png "")
 
+Vehicles
+
+![alt text](https://github.com/hyfung/jetson_ssd_retrain/blob/master/images/03.png "")
+
 ## Other Pretrained Models
 Visit https://github.com/hyfung/jetson_ssd_retrain_models for my pretrained other models
