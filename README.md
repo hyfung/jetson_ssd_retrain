@@ -90,7 +90,13 @@ python3 run_ssd_example.py mb1-ssd *.pth models/*/labels.txt test.jpg
 python3 run_ssd_example_live.py mb1-ssd *.pth models/*/labels.txt 0
 ```
 
+Human Hand
+
 ![alt text](https://github.com/hyfung/jetson_ssd_retrain/blob/master/images/01.png "")
+
+Dog
+
+![alt text](https://github.com/hyfung/jetson_ssd_retrain/blob/master/images/02.png "")
 
 ## Other Pretrained Models
 Visit https://github.com/hyfung/jetson_ssd_retrain_models for my pretrained other models
