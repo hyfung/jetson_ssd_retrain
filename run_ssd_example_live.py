@@ -47,7 +47,7 @@ else:
     predictor = create_vgg_ssd_predictor(net, candidate_size=200)
 
 # Initialize an OpenCV capture
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(int(image_path))
 # Main loop for OpenCV SSD
 while True:
     ret, display_image = cap.read()
@@ -61,10 +61,10 @@ while True:
     # For each detection box draw the corresponding label
     for i in range(boxes.size(0)):
         box = boxes[i, :]
-        cv2.rectangle(display_image, (box[0], box[1]), (box[2], box[3]), (255, 255, 0), 4)
+        cv2.rectangle(display_image, (int(box[0]), int(box[1])), (int(box[2]), int(box[3])), (255, 255, 0), 4)
         #label = f"""{voc_dataset.class_names[labels[i]]}: {probs[i]:.2f}"""
         label = f"{class_names[labels[i]]}: {probs[i]:.2f}"
-        cv2.putText(display_image, label, (box[0] + 20, box[1] + 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2)
+        cv2.putText(display_image, label, (int(box[0]) + 20, int(box[1]) + 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2)
 
     # Verbal description of inference result
     print(f"Found {len(probs)} objects.")
