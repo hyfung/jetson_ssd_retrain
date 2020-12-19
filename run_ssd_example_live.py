@@ -48,6 +48,13 @@ else:
 
 # Initialize an OpenCV capture
 cap = cv2.VideoCapture(int(image_path))
+
+# Initialize a named window to hold track bars
+cv2.namedWindow("Result")
+
+cv2.createTrackbar("Confidence", "Result", 0, 100, lambda x: None)
+cv2.setTrackbarPos("Confidence", "Result", 85)
+
 # Main loop for OpenCV SSD
 while True:
     ret, display_image = cap.read()
@@ -60,6 +67,10 @@ while True:
 
     # For each detection box draw the corresponding label
     for i in range(boxes.size(0)):
+        if probs[i] * 100 < cv2.getTrackbarPos("Confidence", "Result"):
+            # If the confidence is lower than our threshold, don't draw on frame
+            continue
+
         box = boxes[i, :]
         cv2.rectangle(display_image, (int(box[0]), int(box[1])), (int(box[2]), int(box[3])), (255, 255, 0), 4)
         #label = f"""{voc_dataset.class_names[labels[i]]}: {probs[i]:.2f}"""
