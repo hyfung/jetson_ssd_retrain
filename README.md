@@ -30,6 +30,11 @@ pip3 install -r requirements.txt
 The packages used are: pytorch, pandas, boto3
 
 ## Usage
+### Downloading Pretrained Model For Transfer Learning
+
+```
+wget https://download.pytorch.org/models/vgg16-397923af.pth -O models/vgg16.pth
+```
 
 ### Downloading Datasets From Open Images
 Refer to https://github.com/dusty-nv/pytorch-ssd/blob/master/open_images_classes.txt for labels
