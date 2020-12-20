@@ -70,6 +70,11 @@ python3 train_ssd.py --model-dir=models/<MODEL_NAME> --batch-size=N --num-epochs
 python3 train_ssd.py --model-dir=models/ --batch-size=8 --num-epochs=50
 ```
 
+To train VGG16-SSD
+```
+python3 train_ssd.py --net=vgg16-ssd --pretrained-ssd=models/vgg16-ssd-mp-0_7726.pth --model-dir=models/<MODEL_NAME> --batch-size=N --num-epochs=N
+```
+
 ### Converting To ONNX Format
 ```
 python3 onnx_export.py --model-dir=models/<MODEL_NAME>
