@@ -33,6 +33,7 @@ The packages used are: pytorch, pandas, boto3
 ### Downloading Pretrained Model For Transfer Learning
 
 ```
+wget https://storage.googleapis.com/models-hao/vgg16-ssd-mp-0_7726.pth -O models/vgg16-ssd-mp-0_7726.pth
 wget https://download.pytorch.org/models/vgg16-397923af.pth -O models/vgg16.pth
 ```
 
