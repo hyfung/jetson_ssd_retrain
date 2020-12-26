@@ -33,7 +33,10 @@ The packages used are: pytorch, pandas, boto3
 ### Downloading Pretrained Model For Transfer Learning
 
 ```
+# Download the pretrained VGG16-SSD for transfer learning
 wget https://storage.googleapis.com/models-hao/vgg16-ssd-mp-0_7726.pth -O models/vgg16-ssd-mp-0_7726.pth
+
+# Image Recognition only, no SSD, kept for reference
 wget https://download.pytorch.org/models/vgg16-397923af.pth -O models/vgg16.pth
 ```
 
@@ -50,6 +53,7 @@ python3 open_images_downloader.py --stats-only --class-names="CLASSNAMES"
 To download images, do
 ```
 python3 open_images_downloader.py --class-names="CLASSNAMES" --max-images=N
+
 #For example
 #python3 open_images_downloader.py --class-names="Man,Woman" --max-images=2500
 ```
