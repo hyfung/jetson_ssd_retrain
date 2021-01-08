@@ -30,7 +30,9 @@ pip3 install -r requirements.txt
 The packages used are: pytorch, pandas, boto3
 
 ## Usage
-### Downloading Pretrained Model For Transfer Learning
+### Downloading Pretrained Model For Transfer Learning (e.g. VGG)
+
+Not applicable to MB1-SSD, this repo already has a pre-trained model for MB1-SSD.
 
 ```
 # Download the pretrained VGG16-SSD for transfer learning
