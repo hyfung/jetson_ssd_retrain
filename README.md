@@ -7,7 +7,7 @@ Windows is not supported.<br>
 
 Retrained models are stored in https://github.com/hyfung/jetson_ssd_retrain_models
 
-## Installing Dependencies
+## Installing Dependencies (For Retraining On Desktop)
 
 ### CUDA Driver
 Ubuntu 18.04 LTS is used in this demo
