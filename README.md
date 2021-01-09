@@ -7,6 +7,8 @@ Windows is not supported.<br>
 
 Retrained models are stored in https://github.com/hyfung/jetson_ssd_retrain_models
 
+This project is based on https://github.com/qfgaohao/pytorch-ssd and Nvidia's Hello-AI
+
 ## Installing Dependencies (For Retraining On Desktop)
 
 ### CUDA Driver
